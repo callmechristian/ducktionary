@@ -1,1 +1,1 @@
-# ducktionary.github.io
+# Ducktionary
