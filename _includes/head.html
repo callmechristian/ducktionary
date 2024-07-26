@@ -3,6 +3,13 @@
     <title>Ducktionary</title>
     <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
     <link rel="shortcut icon" type="image/png" href="favicon.png">
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var script = document.createElement('script');
+            script.src = "{{ '/assets/js/main.js' | relative_url }}";
+            document.head.appendChild(script);
+        });
+    </script>
 </head>
 
 <header>
@@ -15,7 +22,7 @@
         </div>
     </div>
     <div class="search-bar">
-        <input type="text" placeholder="Search...">
-        <button type="submit">Search</button>
+        <input type="text" placeholder="Search..." id="filterInput" oninput="filterCards()">
+        <!-- <button type="submit" oninput="filterCards()">Search</button> -->
     </div>
 </header>
