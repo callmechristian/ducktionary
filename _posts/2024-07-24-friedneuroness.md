@@ -1,5 +1,5 @@
 ---
-title: "Friedneuroness"
+title: "friedneuroness"
 phonetics: "/fraɪd ˈnʊərɒn nɛs/"
 function: "noun"
 definition: "State in which a person has, metaphorically, fried their neurons and is now incapable of doing any intellectual work due to excessive brain activity in the past."

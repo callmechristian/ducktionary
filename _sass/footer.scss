@@ -1,4 +1,4 @@
-footer div {
+footer .thanks {
     background-color: #f3f3f3;;
     padding: 20px;
     text-align: center;
@@ -16,7 +16,7 @@ footer div p {
     margin: 0;
 }
 
-footer div::before {
+footer .thanks::before {
     content: "";
     position: absolute;
     top: 0;
@@ -24,4 +24,19 @@ footer div::before {
     width: 80%; /* Adjust this value to control the width of the accent line */
     height: 1px;
     background-color: #d7d7d7; /* Adjust the color of the accent line */
+}
+
+footer .donate {
+    position: relative;
+    display: flex;
+    width: fit-content;
+    margin: 0 auto;
+    text-align: center;
+    align-items: center;
+    align-content: center;
+}
+
+footer .donate img {
+    margin-left: 1em;
+    margin-right: 0.1em;
 }
