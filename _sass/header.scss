@@ -6,6 +6,21 @@ header {
     margin-top: 0;
     margin-left: 0;
     margin-right: 0;
+
+    @media screen and (max-width: 800px) {
+        display: block;
+        align-items: center;
+        align-content: center;
+    }
+}
+
+.titlogo {
+    display: flex;
+    align-items: center;
+    @media screen and (max-width: 800px) {
+        margin: 0 auto;
+        width: fit-content;
+    }
 }
 
 .logo img {
@@ -31,6 +46,12 @@ header {
     margin-left: auto;
     display: flex;
     align-items: center;
+    @media screen and (max-width: 800px) {
+        display: block;
+        margin: 0 auto;
+        width: fit-content;
+        margin-top: 1em;
+    }
 }
 
 .search-bar input[type="text"] {
