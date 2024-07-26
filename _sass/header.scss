@@ -17,15 +17,23 @@ header {
 .titlogo {
     display: flex;
     align-items: center;
+    transition: transform 0.05s ease-in-out;
     @media screen and (max-width: 800px) {
         margin: 0 auto;
         width: fit-content;
     }
 }
 
+.titlogo:hover {
+    transform: scale(1.05);
+}
+
 .logo img {
     width: 50px;
     height: 50px;
+    pointer-events: none;
+    pointer-events: none;
+    user-select: none;
 }
 
 .title {
@@ -34,6 +42,7 @@ header {
 
 .title h1{
     display: inline;
+    user-select: none;
 }
 
 .title p {

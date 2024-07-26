@@ -59,6 +59,11 @@ body {
   padding: 20px;
   max-width: 25vw;
   margin-bottom: 1em;
+  transition: transform 0.1s ease-in-out;
+}
+
+.card:hover {
+  transform: scale(1.05); /* Scale the card up on hover */
 }
 
 @media only screen and (max-width: 800px) {
