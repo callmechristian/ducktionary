@@ -1,5 +1,12 @@
 url: "https://callmechristian.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 baseurl: "/ducktionary" # the subpath of your site, e.g. /blog
-title: "" # the name of your site, e.g. ACME Corp.
+title: "Ducktionary" # the name of your site, e.g. ACME Corp.
 
-theme: minima
+sass:
+  sass_dir: _sass
+  style: compressed
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap

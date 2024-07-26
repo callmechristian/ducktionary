@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+{% include head.html %}
+<body>
+    <div class="greeting">
+        <h1>Henlo!</h1>
+        <p>Start quacking! 🦆</p>
+    </div>
+    <main>
+        <div class="card-gallery">
+            <div class="card-column" id="column-0">
+            </div>
+            <div class="card-column" id="column-1">
+            </div>
+            <div class="card-column" id="column-2">
+            </div>
+            {% if site.posts.size > 0 %}
+                {% for post in site.posts %}
+                    {% assign column_index = forloop.index0 | modulo: 3 %}
+                    <div class="card" data-column="{{ column_index }}">
+                        <!-- <div class="card-image">
+                            <img src="{{ site.baseurl }}/{{ post.image }}" alt="{{ post.title }}">
+                        </div> -->
+                        <h2>{{ post.title }}</h2>
+                        <p class="phonetics">{{ post.phonetics }}</p>
+                        <p class="function">{{ post.function }}</p>
+                        <p class="definition"><span class="bold">definition</span><br />{{ post.definition }}</p>
+                        <p class="example"><span class="bold">E.g.:</span><br /> {{ post.example }}</p>
+        
+                        <a href="{{ site.baseurl }}/{{ post.url }}" class="btn">Read More</a>
+                    </div>
+                {% endfor %}
+            {% else %}
+                <p>No posts found.</p>
+            {% endif %}
+        </div>
+    </main>
+
+    {% include footer.html %}
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const columns = document.querySelectorAll(".card-column");
+            const cards = document.querySelectorAll(".card");
+        
+            cards.forEach(card => {
+                const columnIndex = card.getAttribute("data-column");
+                columns[columnIndex].appendChild(card);
+            });
+        });
+    </script>
+</body>
+</html>

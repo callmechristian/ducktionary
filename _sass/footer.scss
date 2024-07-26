@@ -1,0 +1,27 @@
+footer div {
+    background-color: #f3f3f3;;
+    padding: 20px;
+    text-align: center;
+    color: #333;
+    font-size: 14px;
+    position: relative; /* Add this line */
+    bottom: 0; /* Add this line */
+    left: 0; /* Add this line */
+    width: calc(100% - 40px); /* Add this line */
+    margin: 0;
+    margin-top: 5em;
+}
+
+footer div p {
+    margin: 0;
+}
+
+footer div::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 10%; /* Adjust this value to control the position of the accent line */
+    width: 80%; /* Adjust this value to control the width of the accent line */
+    height: 1px;
+    background-color: #d7d7d7; /* Adjust the color of the accent line */
+}
